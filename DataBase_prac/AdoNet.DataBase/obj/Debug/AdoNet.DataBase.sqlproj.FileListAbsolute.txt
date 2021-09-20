@@ -1,0 +1,5 @@
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\bin\Debug\AdoNet.DataBase.dacpac
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\bin\Debug\AdoNet.DataBase.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\bin\Debug\AdoNet.DataBase.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\AdoNet.DataBase.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\AdoNet.DataBase.pdb
