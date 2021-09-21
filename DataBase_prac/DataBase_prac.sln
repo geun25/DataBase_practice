@@ -11,6 +11,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdoNet.DataBase", "AdoNet.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfiguration", "AppConfiguration\AppConfiguration.csproj", "{F82C44DB-D5FB-45DD-90E6-0441BE4F7A2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetWindow.Model", "AdoNetWindow.Model\AdoNetWindow.Model.csproj", "{75E86CFE-BF38-4FCE-A537-A3956449065C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{F82C44DB-D5FB-45DD-90E6-0441BE4F7A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F82C44DB-D5FB-45DD-90E6-0441BE4F7A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F82C44DB-D5FB-45DD-90E6-0441BE4F7A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E86CFE-BF38-4FCE-A537-A3956449065C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E86CFE-BF38-4FCE-A537-A3956449065C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E86CFE-BF38-4FCE-A537-A3956449065C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E86CFE-BF38-4FCE-A537-A3956449065C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
