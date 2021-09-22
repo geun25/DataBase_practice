@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{03C45C03-128B-43AC-B2B1-DD950293F24F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>AdoNetWindow</RootNamespace>
     <AssemblyName>AdoNetWindow</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -102,6 +102,14 @@
     <ProjectReference Include="..\AspNet\AdoNet.csproj">
       <Project>{A5D606F9-57E8-4C53-8790-17FF641ECB4B}</Project>
       <Name>AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Libs.csproj">
+      <Project>{E0FFC618-E830-4EC3-811C-77790E479742}</Project>
+      <Name>Libs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{44E1F57C-1983-48F8-8197-27E17B0D431E}</Project>
+      <Name>Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

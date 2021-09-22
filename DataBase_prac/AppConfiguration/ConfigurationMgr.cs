@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -11,7 +12,6 @@ namespace AppConfiguration
         public string ConnectionString { get; set; }
 
         IDbConnection connection;
-
         public IDbConnection Connection
         {
             get
@@ -30,7 +30,8 @@ namespace AppConfiguration
 
         private ConfigurationMgr()
         {
-            LoadConfiguration();
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+                LoadConfiguration();
         }
      
         private void LoadConfiguration()
@@ -42,7 +43,7 @@ namespace AppConfiguration
         public static ConfigurationMgr Instance()
         {
             if (instance == null)
-                instance = new ConfigurationMgr();
+                instance = new ConfigurationMgr(); // 내부적으로 자체 생성
             return instance;
         }
     }

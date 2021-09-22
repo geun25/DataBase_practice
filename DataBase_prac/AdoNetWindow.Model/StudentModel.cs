@@ -8,7 +8,7 @@ namespace AdoNetWindow.Model
 {
     public class StudentModel
     {
-        public string StudentId
+        public int StudentId
         {
             get;
             set;

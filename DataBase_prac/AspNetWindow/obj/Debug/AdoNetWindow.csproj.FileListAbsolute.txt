@@ -6,7 +6,6 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debu
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AppConfiguration.pdb
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AdoNet.pdb
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.csproj.AssemblyReference.cache
-C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AspNetWindow.Form1.resources
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.Properties.Resources.resources
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.csproj.GenerateResource.cache
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.csproj.CoreCompileInputs.cache
@@ -14,3 +13,9 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debu
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.exe
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.pdb
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.Form1.resources
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AdoNetWindow.Model.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\Libs.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\Repositories.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AdoNetWindow.Model.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\Libs.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\Repositories.pdb

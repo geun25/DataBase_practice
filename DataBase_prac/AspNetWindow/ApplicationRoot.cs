@@ -1,4 +1,5 @@
 ﻿using AppConfiguration;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace AdoNetWindow
@@ -9,7 +10,10 @@ namespace AdoNetWindow
         public ApplicationRoot()
         {
             InitializeComponent();
-            instance = ConfigurationMgr.Instance();
+            
+            // 디자인 모드에서는 동작하지 않도록 함.
+            if(LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+                instance = ConfigurationMgr.Instance();
         }
     }
 }

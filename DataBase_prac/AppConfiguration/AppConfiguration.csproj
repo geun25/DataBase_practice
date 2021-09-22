@@ -45,5 +45,15 @@
     <Compile Include="ConfigurationMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdoNetWindow.Model\AdoNetWindow.Model.csproj">
+      <Project>{75e86cfe-bf38-4fce-a537-a3956449065c}</Project>
+      <Name>AdoNetWindow.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspNet\AdoNet.csproj">
+      <Project>{a5d606f9-57e8-4c53-8790-17ff641ecb4b}</Project>
+      <Name>AdoNet</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
