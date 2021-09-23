@@ -18,7 +18,7 @@ namespace Repositories
         public int Add(StudentModel model, IDbTransaction transaction = null)
         {
             StringBuilder qry = new StringBuilder();
-            qry.Append($" INSERT INTO TB_STudent (StudentName, Address)");
+            qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
             qry.Append($" Values('{model.StudentName}', '{model.Address}')");
             qry.Append($" SELECT SCOPE_IDENTITY()");
 

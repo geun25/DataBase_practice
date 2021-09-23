@@ -8,6 +8,7 @@ namespace AdoNetWindow
     {
         //MsSql msql;
         //string ConnectionString;
+
         IStudentRepository studentRepository;
        
         public Form1()
