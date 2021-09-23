@@ -1,4 +1,5 @@
 ﻿using AdoNetWindow.Model;
+using Dapper;
 using Libs;
 using System;
 using System.Collections.Generic;
@@ -15,16 +16,52 @@ namespace Repositories
 
         }
 
-        public int Add(StudentModel model, IDbTransaction transaction = null)
-        {
-            StringBuilder qry = new StringBuilder();
-            qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
-            qry.Append($" Values('{model.StudentName}', '{model.Address}')");
-            qry.Append($" SELECT SCOPE_IDENTITY()");
+        //public int Add(StudentModel model, IDbTransaction transaction = null)
+        //{
+        //    StringBuilder qry = new StringBuilder();
+        //    qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
+        //    qry.Append($" Values('{model.StudentName}', '{model.Address}')");
+        //    qry.Append($" SELECT SCOPE_IDENTITY()");
 
-            SqlCommand command = new SqlCommand(qry.ToString(), (SqlConnection)dbInstance.Connection);
-            model.StudentId = int.Parse(command.ExecuteScalar().ToString());
-            return model.StudentId;
+        //    SqlCommand command = new SqlCommand(qry.ToString(), (SqlConnection)dbInstance.Connection);
+        //    model.StudentId = int.Parse(command.ExecuteScalar().ToString());
+        //    return model.StudentId;
+        //}
+
+        //public int Add(StudentModel model, IDbTransaction transaction = null)
+        //{
+        //StringBuilder qry = new StringBuilder();
+        //qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
+        //qry.Append($" Values('{model.StudentName}', '{model.Address}')");
+        //qry.Append($" SELECT SCOPE_IDENTITY()");
+
+        //    SqlCommand command = new SqlCommand("SP_Student_Add", (SqlConnection)dbInstance.Connection);
+        //    command.CommandType = CommandType.StoredProcedure;
+
+        //    SqlParameter paramStudentName = new SqlParameter();
+        //    paramStudentName.ParameterName = "@StudentName";
+        //    paramStudentName.SqlDbType = SqlDbType.VarChar;
+        //    paramStudentName.Value = model.StudentName;
+        //    command.Parameters.Add(paramStudentName);
+
+        //    SqlParameter paramAddress = new SqlParameter("@Address", SqlDbType.VarChar);
+        //    paramAddress.Value = model.Address;
+        //    command.Parameters.Add(paramAddress);
+
+        //    object newId = command.ExecuteScalar();
+        //    model.StudentId = int.Parse(newId.ToString());
+        //    return model.StudentId;
+        //}
+
+        public void Add(StudentModel model, IDbTransaction transaction = null)
+        {
+            string spName = "SP_Student_Add";
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            parameters.Add("@StudentName", value: model.StudentName, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@Address", value: model.Address, dbType: DbType.String, direction: ParameterDirection.Input);
+            int newId = dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
+            model.StudentId = parameters.Get<int>("@StudentId");
         }
 
         public int Delete(int student_id, IDbTransaction transaction = null)

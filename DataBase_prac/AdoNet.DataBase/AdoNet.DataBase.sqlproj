@@ -62,9 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="ado\Table\TB_Student.sql" />
-    <Build Include="ado\Stored Procedures\SP_Student_Add.sql" />
     <Build Include="ado\Table\TB_Subject.sql" />
     <Build Include="ado\Table\TB_CourseRegistration.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_Add.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_Delete.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_GetAll.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_GetById.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_Update.sql" />
+    <Build Include="ado\Stored Procedures\SP_Student_UpdateName.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AdoNet.DataBase.refactorlog" />

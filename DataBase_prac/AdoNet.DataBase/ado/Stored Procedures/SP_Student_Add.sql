@@ -2,14 +2,15 @@
 	@StudentName varchar(50),
 	@Address varchar(200)
 AS
-	INSERT INTO
+	INSERT
 		TB_Student
 		(
 			StudentName,
 			Address
 		)
-	Values
+	VALUES
 		(
 			@StudentName,
 			@Address
 		)
+	RETURN SCOPE_IDENTITY()
