@@ -1,11 +1,9 @@
 ﻿using AdoNetWindow.Model;
 using Dapper;
 using Libs;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Text;
+using System.Linq;
 
 namespace Repositories
 {
@@ -64,12 +62,20 @@ namespace Repositories
             model.StudentId = parameters.Get<int>("@StudentId");
         }
 
+        //public int Delete(int student_id, IDbTransaction transaction = null)
+        //{
+        //    StringBuilder qry = new StringBuilder();
+        //    qry.Append($" DELETE TB_Student WHERE StudentId = {student_id}");
+        //    SqlCommand command = new SqlCommand(qry.ToString(), (SqlConnection)dbInstance.Connection);
+        //    return command.ExecuteNonQuery();
+        //}
+
         public int Delete(int student_id, IDbTransaction transaction = null)
         {
-            StringBuilder qry = new StringBuilder();
-            qry.Append($" DELETE TB_Student WHERE StudentId = {student_id}");
-            SqlCommand command = new SqlCommand(qry.ToString(), (SqlConnection)dbInstance.Connection);
-            return command.ExecuteNonQuery();
+            string spName = "SP_Student_Delete";
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
         }
 
         //public DataSet GetAll(IDbTransaction transaction = null)
@@ -86,42 +92,56 @@ namespace Repositories
 
         public List<StudentModel> GetAll(IDbTransaction transaction = null)
         {
-            StringBuilder qry = new StringBuilder();
-            qry.Append($" SELECT StudentId, StudentName, Address");
-            qry.Append($" FROM TB_Student ORDER BY StudentName");
-            SqlCommand command = new SqlCommand(qry.ToString(), (SqlConnection)dbInstance.Connection);
-            SqlDataReader dr = command.ExecuteReader(CommandBehavior.CloseConnection);
-            return GetStudentModel(dr);
+            string spName = "SP_Student_GetAll";
+            var parameters = new DynamicParameters();
+            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure).ToList();
         }
 
-        public StudentModel GetById(int student_model, IDbTransaction transaction = null)
+        public StudentModel GetById(int student_id, IDbTransaction transaction = null)
         {
-            throw new NotImplementedException();
+            string spName = "SP_Student_GetById";
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
         public int Update(StudentModel model, IDbTransaction transaction = null)
         {
-            throw new NotImplementedException();
+            string spName = "SP_Student_Update";
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameters.Add("@StudentName", value: model.StudentName, dbType: DbType.String, direction: ParameterDirection.Input);
+            parameters.Add("@Address", value: model.Address, dbType: DbType.String, direction: ParameterDirection.Input);
+            return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
         }
+
+        public int UpdateName(int student_id, string student_name, IDbTransaction transaction = null)
+        {
+            string spName = "SP_Student_UpdateName";
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
+            parameters.Add("@StudentName", value: student_name, dbType: DbType.String, direction: ParameterDirection.Input);
+            return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
+    }
 
         /// <summary>
         /// Dapper를 사용해서 불필요한 함수를 생략 가능
         /// </summary>
         /// <param name="rd"></param>
         /// <returns></returns>
-        private List<StudentModel> GetStudentModel(SqlDataReader rd)
-        {
-            List<StudentModel> studentLists = new List<StudentModel>();
-            while(rd.Read())
-            {
-                StudentModel model = new StudentModel();
-                model.StudentId = int.Parse(rd["StudentId"].ToString());
-                model.StudentName = rd["StudentName"].ToString();
-                model.Address = rd["Address"].ToString();
-                studentLists.Add(model);
-            }
-            rd.Close();
-            return studentLists;
-        }
+        //private List<StudentModel> GetStudentModel(SqlDataReader rd)
+        //{
+        //    List<StudentModel> studentLists = new List<StudentModel>();
+        //    while(rd.Read())
+        //    {
+        //        StudentModel model = new StudentModel();
+        //        model.StudentId = int.Parse(rd["StudentId"].ToString());
+        //        model.StudentName = rd["StudentName"].ToString();
+        //        model.Address = rd["Address"].ToString();
+        //        studentLists.Add(model);
+        //    }
+        //    rd.Close();
+        //    return studentLists;
+        //}
     }
 }

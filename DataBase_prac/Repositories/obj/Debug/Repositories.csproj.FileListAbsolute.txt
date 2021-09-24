@@ -11,3 +11,5 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\obj\Debu
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\obj\Debug\Repositories.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\obj\Debug\Repositories.dll
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\obj\Debug\Repositories.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\bin\Debug\Dapper.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Repositories\bin\Debug\Dapper.xml
