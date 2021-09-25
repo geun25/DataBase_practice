@@ -70,6 +70,11 @@
     <Build Include="ado\Stored Procedures\SP_Student_GetById.sql" />
     <Build Include="ado\Stored Procedures\SP_Student_Update.sql" />
     <Build Include="ado\Stored Procedures\SP_Student_UpdateName.sql" />
+    <Build Include="ado\Stored Procedures\SP_Subject_Add.sql" />
+    <Build Include="ado\Stored Procedures\SP_Subject_Delete.sql" />
+    <Build Include="ado\Stored Procedures\SP_Subject_Update.sql" />
+    <Build Include="ado\Stored Procedures\SP_Subject_GetAll.sql" />
+    <Build Include="ado\Stored Procedures\SP_Subject_GetById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AdoNet.DataBase.refactorlog" />

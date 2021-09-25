@@ -27,7 +27,7 @@ namespace Repositories
         {
             string spName = "SP_Subject_Delete";
             var parameters = new DynamicParameters();
-            parameters.Add("@SubjectId", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
         }
 
@@ -42,7 +42,7 @@ namespace Repositories
         {
             string spName = "SP_Subject_GetAll";
             var parameters = new DynamicParameters();
-            parameters.Add("@SubjectId", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             return dbInstance.Connection.Query<SubjectModel>(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
@@ -50,7 +50,7 @@ namespace Repositories
         {
             string spName = "SP_Subject_Update";
             var parameters = new DynamicParameters();
-            parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectName", value: subject_name, dbType: DbType.String, direction: ParameterDirection.Input);
             return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
         }
@@ -59,7 +59,7 @@ namespace Repositories
         {
             string spName = "SP_Subject_Update";
             var parameters = new DynamicParameters();
-            parameters.Add("@SubjectId", value: model.SubjectId, dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+            parameters.Add("@SubjectId", value: model.SubjectId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectName", value: model.SubjectName, dbType: DbType.String, direction: ParameterDirection.Input);
             return dbInstance.Connection.Execute(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure);
         }

@@ -34,14 +34,13 @@ namespace AdoNetWindow
             this.mb학생등록 = new System.Windows.Forms.ToolStripMenuItem();
             this.수강신청ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.과목관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tm종료 = new System.Windows.Forms.ToolStripMenuItem();
             this.mb과목등록 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tm종료 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.학생관리ToolStripMenuItem,
@@ -65,14 +64,14 @@ namespace AdoNetWindow
             // mb학생등록
             // 
             this.mb학생등록.Name = "mb학생등록";
-            this.mb학생등록.Size = new System.Drawing.Size(270, 34);
+            this.mb학생등록.Size = new System.Drawing.Size(186, 34);
             this.mb학생등록.Text = "학생등록";
             this.mb학생등록.Click += new System.EventHandler(this.mb학생등록_Click);
             // 
             // 수강신청ToolStripMenuItem
             // 
             this.수강신청ToolStripMenuItem.Name = "수강신청ToolStripMenuItem";
-            this.수강신청ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.수강신청ToolStripMenuItem.Size = new System.Drawing.Size(186, 34);
             this.수강신청ToolStripMenuItem.Text = "수강신청";
             // 
             // 과목관리ToolStripMenuItem
@@ -83,18 +82,18 @@ namespace AdoNetWindow
             this.과목관리ToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.과목관리ToolStripMenuItem.Text = "과목관리";
             // 
+            // mb과목등록
+            // 
+            this.mb과목등록.Name = "mb과목등록";
+            this.mb과목등록.Size = new System.Drawing.Size(186, 34);
+            this.mb과목등록.Text = "과목등록";
+            this.mb과목등록.Click += new System.EventHandler(this.mb과목등록_Click);
+            // 
             // tm종료
             // 
             this.tm종료.Name = "tm종료";
             this.tm종료.Size = new System.Drawing.Size(64, 29);
             this.tm종료.Text = "종료";
-            // 
-            // mb과목등록
-            // 
-            this.mb과목등록.Name = "mb과목등록";
-            this.mb과목등록.Size = new System.Drawing.Size(270, 34);
-            this.mb과목등록.Text = "과목등록";
-            this.mb과목등록.Click += new System.EventHandler(this.mb과목등록_Click);
             // 
             // WinMain
             // 
@@ -105,7 +104,7 @@ namespace AdoNetWindow
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WinMain";
-            this.Text = "WinMain";
+            this.Text = "학생 수강신청 관리";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

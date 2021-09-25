@@ -23,3 +23,5 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debu
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.frmStudentAdd.resources
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.frmSubjectAdd.resources
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\obj\Debug\AdoNetWindow.WinMain.resources
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AdoNetWIndow.View.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AspNetWindow\bin\Debug\AdoNetWIndow.View.pdb

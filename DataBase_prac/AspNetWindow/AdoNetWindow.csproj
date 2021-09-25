@@ -113,6 +113,10 @@
       <Project>{75E86CFE-BF38-4FCE-A537-A3956449065C}</Project>
       <Name>AdoNetWindow.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AdoNetWIndow.View\AdoNetWindow.View.csproj">
+      <Project>{B193A915-31D8-4AD5-96BC-3597FE3AD53D}</Project>
+      <Name>AdoNetWindow.View</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AppConfiguration\AppConfiguration.csproj">
       <Project>{f82c44db-d5fb-45dd-90e6-0441be4f7a2d}</Project>
       <Name>AppConfiguration</Name>
