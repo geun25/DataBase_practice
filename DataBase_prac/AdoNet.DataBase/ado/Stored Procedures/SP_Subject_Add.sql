@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Subject_Add]
 	@SubjectName varchar(50)
 AS
-	INSERT
+	INSERT INTO
 		TB_Subject
 		(
 			SubjectName

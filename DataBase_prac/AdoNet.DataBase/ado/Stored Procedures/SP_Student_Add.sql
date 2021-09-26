@@ -2,7 +2,7 @@
 	@StudentName varchar(50),
 	@Address varchar(200)
 AS
-	INSERT
+	INSERT INTO
 		TB_Student
 		(
 			StudentName,

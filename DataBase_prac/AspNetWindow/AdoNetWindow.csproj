@@ -56,6 +56,12 @@
     <Compile Include="ApplicationRoot.Designer.cs">
       <DependentUpon>ApplicationRoot.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCourseRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseRegistration.Designer.cs">
+      <DependentUpon>frmCourseRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="WinMain.Designer.cs">
       <DependentUpon>WinMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCourseRegistration.resx">
+      <DependentUpon>frmCourseRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentAdd.resx">
       <DependentUpon>frmStudentAdd.cs</DependentUpon>
     </EmbeddedResource>

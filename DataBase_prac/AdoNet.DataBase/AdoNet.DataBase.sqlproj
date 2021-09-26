@@ -75,6 +75,10 @@
     <Build Include="ado\Stored Procedures\SP_Subject_Update.sql" />
     <Build Include="ado\Stored Procedures\SP_Subject_GetAll.sql" />
     <Build Include="ado\Stored Procedures\SP_Subject_GetById.sql" />
+    <Build Include="ado\Stored Procedures\SP_CourseRegistration_Add.sql" />
+    <Build Include="ado\Stored Procedures\SP_CourseRegistration_Delete.sql" />
+    <Build Include="ado\Stored Procedures\SP_CourseRegistration_Update.sql" />
+    <Build Include="ado\Stored Procedures\SP_CourseRegistration_GetByUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="AdoNet.DataBase.refactorlog" />
