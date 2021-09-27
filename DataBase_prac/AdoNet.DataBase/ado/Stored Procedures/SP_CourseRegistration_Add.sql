@@ -8,7 +8,7 @@ AS
 		(
 			StudentId,
 			SubjectId,
-			RegisterDate
+			RegistedDate
 		)
 	VALUES
 		(

@@ -126,15 +126,15 @@ namespace AdoNetWindow
             this.gridStudent.TabIndex = 7;
             this.gridStudent.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridStudent_CellValueChanged);
             // 
-            // Form1
+            // frmStudentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 450);
             this.Controls.Add(this.gridStudent);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmStudentAdd";
+            this.Text = "학생 수강신청 관리";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridStudent)).EndInit();

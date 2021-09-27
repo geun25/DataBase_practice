@@ -3,3 +3,7 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\bin\D
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\bin\Debug\AdoNet.DataBase.pdb
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\AdoNet.DataBase.dll
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\AdoNet.DataBase.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\Model.xml
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\refactor.xml
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\postdeploy.sql
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\AdoNet.DataBase\obj\Debug\predeploy.sql

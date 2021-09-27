@@ -28,10 +28,10 @@ namespace Repositories
 
         //public int Add(StudentModel model, IDbTransaction transaction = null)
         //{
-        //StringBuilder qry = new StringBuilder();
-        //qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
-        //qry.Append($" Values('{model.StudentName}', '{model.Address}')");
-        //qry.Append($" SELECT SCOPE_IDENTITY()");
+        //    StringBuilder qry = new StringBuilder();
+        //    qry.Append($" INSERT INTO TB_Student (StudentName, Address)");
+        //    qry.Append($" Values('{model.StudentName}', '{model.Address}')");
+        //    qry.Append($" SELECT SCOPE_IDENTITY()");
 
         //    SqlCommand command = new SqlCommand("SP_Student_Add", (SqlConnection)dbInstance.Connection);
         //    command.CommandType = CommandType.StoredProcedure;
@@ -51,6 +51,7 @@ namespace Repositories
         //    return model.StudentId;
         //}
 
+        // Dapper 사용
         public void Add(StudentModel model, IDbTransaction transaction = null)
         {
             string spName = "SP_Student_Add";

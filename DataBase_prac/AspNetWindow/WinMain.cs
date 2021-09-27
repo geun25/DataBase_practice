@@ -54,5 +54,11 @@ namespace AdoNetWindow
             frmSubjectAdd form = new frmSubjectAdd();
             ShowSubForm(this, form);
         }
+
+        private void mb수강신청_Click(object sender, EventArgs e)
+        {
+            frmCourseRegistration form = new frmCourseRegistration();
+            ShowSubForm(this, form);
+        }
     }
 }

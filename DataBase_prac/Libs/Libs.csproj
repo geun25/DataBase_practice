@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,13 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassRoot.cs" />
+    <Compile Include="IStudentDeleteHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentDeleteHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppConfiguration\AppConfiguration.csproj">
       <Project>{F82C44DB-D5FB-45DD-90E6-0441BE4F7A2D}</Project>
       <Name>AppConfiguration</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ AS
 		TB_CourseRegistration
 	SET
 		SubjectId = @NewSubjectid,
-		RegisterDate = @RegistedDate
+		RegistedDate = @RegistedDate
 	WHERE
 		StudentId = @StudentId AND
 		SubjectId = @SubjectId

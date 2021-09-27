@@ -1,4 +1,5 @@
 ﻿using AdoNetWindow.Model;
+using Libs;
 using Repositories;
 using System;
 using System.Windows.Forms;
@@ -79,7 +80,16 @@ namespace AdoNetWindow
 
         private void StudentDelete(int student_id)
         {
-            studentRepository.Delete(student_id);
+            //studentRepository.Delete(student_id);
+            IStudentDeleteHandler studentDeleteHandler = new StudentDeleteHandler();
+            try
+            {
+                studentDeleteHandler.Delete(student_id);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             V_ShowStudent();
         }
 

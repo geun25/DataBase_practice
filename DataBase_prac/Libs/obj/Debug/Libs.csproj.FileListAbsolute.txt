@@ -7,3 +7,5 @@ C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\obj\Debug\Libs.c
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\obj\Debug\Libs.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\obj\Debug\Libs.dll
 C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\obj\Debug\Libs.pdb
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\bin\Debug\Dapper.dll
+C:\Users\jin yeong\.vscode\DataBase_practice\DataBase_prac\Libs\bin\Debug\Dapper.xml
