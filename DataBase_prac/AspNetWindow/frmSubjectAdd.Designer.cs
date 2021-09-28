@@ -31,12 +31,12 @@ namespace AdoNetWindow
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSubjectDelete = new System.Windows.Forms.Button();
             this.btnSubjectAdd = new System.Windows.Forms.Button();
             this.txtSubjectName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gridSubject = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnSubjectDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -54,6 +54,16 @@ namespace AdoNetWindow
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 89);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSubjectDelete
+            // 
+            this.btnSubjectDelete.Location = new System.Drawing.Point(466, 26);
+            this.btnSubjectDelete.Name = "btnSubjectDelete";
+            this.btnSubjectDelete.Size = new System.Drawing.Size(74, 28);
+            this.btnSubjectDelete.TabIndex = 3;
+            this.btnSubjectDelete.Text = "삭제";
+            this.btnSubjectDelete.UseVisualStyleBackColor = true;
+            this.btnSubjectDelete.Click += new System.EventHandler(this.btnSubjectDelete_Click);
             // 
             // btnSubjectAdd
             // 
@@ -96,21 +106,10 @@ namespace AdoNetWindow
             this.gridSubject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSubject.Size = new System.Drawing.Size(800, 361);
             this.gridSubject.TabIndex = 1;
-            this.gridSubject.MouseClick += new System.Windows.Forms.MouseEventHandler(this.grdSubject_MouseClick);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // btnSubjectDelete
-            // 
-            this.btnSubjectDelete.Location = new System.Drawing.Point(466, 26);
-            this.btnSubjectDelete.Name = "btnSubjectDelete";
-            this.btnSubjectDelete.Size = new System.Drawing.Size(74, 28);
-            this.btnSubjectDelete.TabIndex = 3;
-            this.btnSubjectDelete.Text = "삭제";
-            this.btnSubjectDelete.UseVisualStyleBackColor = true;
-            this.btnSubjectDelete.Click += new System.EventHandler(this.btnSubjectDelete_Click);
             // 
             // frmSubjectAdd
             // 

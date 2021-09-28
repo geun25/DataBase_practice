@@ -49,15 +49,10 @@ namespace AdoNetWindow
             bool error = false;
             if(txtSubjectName.Text.Trim() == string.Empty)
             {
-                errorProvider1.SetError(txtSubjectName, "괴목명을 입력하세요."); ;
+                errorProvider1.SetError(txtSubjectName, "과목명을 입력하세요."); ;
                 error = true;
             }
             return error;
-        }
-
-        private void grdSubject_MouseClick(object sender, MouseEventArgs e)
-        {
-
         }
 
         private void btnSubjectDelete_Click(object sender, EventArgs e)

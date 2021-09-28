@@ -45,8 +45,8 @@ namespace AdoNetWindow
 
         private void mb학생등록_Click(object sender, EventArgs e)
         {
-            frmStudentAdd Form = new frmStudentAdd();
-            ShowSubForm(this, Form);
+            frmStudentAdd form = new frmStudentAdd();
+            ShowSubForm(this, form);
         }
 
         private void mb과목등록_Click(object sender, EventArgs e)

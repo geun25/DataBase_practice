@@ -56,7 +56,7 @@ namespace AdoNetWindow
         {
             gridStudent.DataSource = studentRepository.GetAll();
             gridStudent.Columns["StudentId"].HeaderText = "학생Id";
-            gridStudent.Columns["StudentId"].ReadOnly = true;
+            gridStudent.Columns["StudentId"].ReadOnly = true; // 학생Id는 수정불가
             gridStudent.Columns["StudentName"].HeaderText = "학생성명";
             gridStudent.Columns["Address"].HeaderText = "주소";
         }

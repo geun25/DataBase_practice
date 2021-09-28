@@ -51,9 +51,9 @@ namespace Repositories
         //    return model.StudentId;
         //}
 
-        // Dapper 사용
         public void Add(StudentModel model, IDbTransaction transaction = null)
         {
+            // Dapper 사용
             string spName = "SP_Student_Add";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
@@ -95,7 +95,8 @@ namespace Repositories
         {
             string spName = "SP_Student_GetAll";
             var parameters = new DynamicParameters();
-            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure).ToList();
+            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, 
+                transaction: transaction, commandType: CommandType.StoredProcedure).ToList();
         }
 
         public StudentModel GetById(int student_id, IDbTransaction transaction = null)
@@ -103,7 +104,8 @@ namespace Repositories
             string spName = "SP_Student_GetById";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
-            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, transaction: transaction, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            return dbInstance.Connection.Query<StudentModel>(spName, param: parameters, 
+                transaction: transaction, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
         public int Update(StudentModel model, IDbTransaction transaction = null)
