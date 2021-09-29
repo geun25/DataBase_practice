@@ -17,8 +17,7 @@ namespace AdoNetWindow
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmStudentAdd_Load(object sender, EventArgs e)
         {
             studentRepository = new StudentRepository();
             V_ShowStudent();
@@ -50,6 +49,7 @@ namespace AdoNetWindow
         private void btnAdd_Click(object sender, EventArgs e)
         {
             StudentAdd();
+            V_ShowStudent();
         }
 
         private void V_ShowStudent()
@@ -106,5 +106,6 @@ namespace AdoNetWindow
                 studentRepository.UpdateName(studentModel.StudentId, studentModel.StudentName);
             V_ShowStudent();
         }
+
     } 
 }

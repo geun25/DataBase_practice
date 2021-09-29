@@ -31,12 +31,12 @@ namespace AdoNetWindow
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCourseRegistration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnCourseRegistration = new System.Windows.Forms.ToolStripButton();
             this.cbStudent = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.gridCourseResistration = new System.Windows.Forms.DataGridView();
             this.gridSubject = new System.Windows.Forms.DataGridView();
-            this.btnCourseRegistration = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCourseResistration)).BeginInit();
@@ -55,24 +55,6 @@ namespace AdoNetWindow
             this.panel1.Size = new System.Drawing.Size(622, 93);
             this.panel1.TabIndex = 0;
             // 
-            // cbStudent
-            // 
-            this.cbStudent.FormattingEnabled = true;
-            this.cbStudent.Location = new System.Drawing.Point(121, 31);
-            this.cbStudent.Name = "cbStudent";
-            this.cbStudent.Size = new System.Drawing.Size(126, 26);
-            this.cbStudent.TabIndex = 1;
-            this.cbStudent.SelectionChangeCommitted += new System.EventHandler(this.cbStudent_SelectionChangeCommitted);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "학생선택:";
-            // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -83,6 +65,33 @@ namespace AdoNetWindow
             this.toolStrip1.Size = new System.Drawing.Size(618, 34);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnCourseRegistration
+            // 
+            this.btnCourseRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnCourseRegistration.Image")));
+            this.btnCourseRegistration.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCourseRegistration.Name = "btnCourseRegistration";
+            this.btnCourseRegistration.Size = new System.Drawing.Size(112, 29);
+            this.btnCourseRegistration.Text = "수강신청";
+            this.btnCourseRegistration.Click += new System.EventHandler(this.btnCourseRegistration_Click);
+            // 
+            // cbStudent
+            // 
+            this.cbStudent.FormattingEnabled = true;
+            this.cbStudent.Location = new System.Drawing.Point(120, 47);
+            this.cbStudent.Name = "cbStudent";
+            this.cbStudent.Size = new System.Drawing.Size(126, 26);
+            this.cbStudent.TabIndex = 1;
+            this.cbStudent.SelectionChangeCommitted += new System.EventHandler(this.cbStudent_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "학생선택:";
             // 
             // gridCourseResistration
             // 
@@ -118,15 +127,6 @@ namespace AdoNetWindow
             this.gridSubject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSubject.Size = new System.Drawing.Size(340, 357);
             this.gridSubject.TabIndex = 2;
-            // 
-            // btnCourseRegistration
-            // 
-            this.btnCourseRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnCourseRegistration.Image")));
-            this.btnCourseRegistration.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCourseRegistration.Name = "btnCourseRegistration";
-            this.btnCourseRegistration.Size = new System.Drawing.Size(112, 29);
-            this.btnCourseRegistration.Text = "수강신청";
-            this.btnCourseRegistration.Click += new System.EventHandler(this.btnCourseRegistration_Click);
             // 
             // frmCourseRegistration
             // 

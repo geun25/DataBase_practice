@@ -16,7 +16,7 @@ namespace Libs
             try
             {
                 DeleteCourseRegistration(student_id, transaction);
-                aa(); // Test Code
+                //aa(); // Test Code
                 DeleteStudent(student_id, transaction);
                 transaction.Commit();
             }
@@ -27,10 +27,10 @@ namespace Libs
             }
         }
 
-        private void aa()
-        {
-            throw new Exception("ㅋㅋㅋ");
-        }
+        //private void aa()
+        //{
+        //    throw new Exception("ㅋㅋㅋ");
+        //}
 
         private void DeleteStudent(int student_id, IDbTransaction transaction)
         {

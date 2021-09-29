@@ -14,7 +14,7 @@ namespace Repositories
     {
         public int Add(int student_id, int subject_id, IDbTransaction transaction = null)
         {
-            string spName = "SP_CourseRegistrationRepository_Add";
+            string spName = "SP_CourseRegistration_Add";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value:student_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectId", value:subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
@@ -24,7 +24,7 @@ namespace Repositories
 
         public int Add(CourseRegistrationModel model, IDbTransaction transaction = null)
         {
-            string spName = "SP_CourseRegistrationRepository_Add";
+            string spName = "SP_CourseRegistration_Add";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value: model.StudentId, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectId", value: model.SubjectId, dbType: DbType.Int32, direction: ParameterDirection.Input);
@@ -34,7 +34,7 @@ namespace Repositories
 
         public int Delete(int student_id, int subject_id, IDbTransaction transaction = null)
         {
-            string spName = "SP_CourseRegistrationRepository_Delete";
+            string spName = "SP_CourseRegistration_Delete";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
@@ -43,7 +43,7 @@ namespace Repositories
 
         public List<CourseRegistrationModel> GetByUser(int student_id, IDbTransaction transaction = null)
         {
-            string spName = "SP_CourseRegistrationRepository_GetByUser";
+            string spName = "SP_CourseRegistration_GetByUser";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             return dbInstance.Connection.Query<CourseRegistrationModel>(spName, param: parameters, transaction: transaction, 
@@ -52,7 +52,7 @@ namespace Repositories
 
         public int Update(int student_id, int subject_id, int new_subject_id, DateTime registed_date, IDbTransaction transaction = null)
         {
-            string spName = "SP_CourseRegistrationRepository_Update";
+            string spName = "SP_CourseRegistration_Update";
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", value: student_id, dbType: DbType.Int32, direction: ParameterDirection.Input);
             parameters.Add("@SubjectId", value: subject_id, dbType: DbType.Int32, direction: ParameterDirection.Input);

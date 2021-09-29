@@ -112,7 +112,7 @@ namespace AdoNetWindow
             // 
             this.gridStudent.AllowUserToAddRows = false;
             this.gridStudent.AllowUserToDeleteRows = false;
-            this.gridStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gridStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridStudent.Location = new System.Drawing.Point(0, 72);
@@ -135,6 +135,7 @@ namespace AdoNetWindow
             this.Controls.Add(this.panel1);
             this.Name = "frmStudentAdd";
             this.Text = "학생 수강신청 관리";
+            this.Load += new System.EventHandler(this.frmStudentAdd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridStudent)).EndInit();
